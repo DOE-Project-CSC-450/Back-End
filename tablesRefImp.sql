@@ -1,28 +1,40 @@
 CREATE TABLE ReflectionGeometry (
-  0  varchar(5) DEFAULT 'di:8' NOT NULL, 
-  1  varchar(5) DEFAULT 'de:8' NOT NULL, 
-  2  varchar(5) DEFAULT '8:di' NOT NULL, 
-  3  varchar(5) DEFAULT '8:de' NOT NULL, 
-  4  varchar(5) DEFAULT 'd:d' NOT NULL, 
-  5  varchar(5) DEFAULT 'd:0' NOT NULL, 
-  6  varchar(5) DEFAULT '45a:0' NOT NULL, 
-  7  varchar(5) DEFAULT '45c:0' NOT NULL, 
-  8  varchar(5) DEFAULT '0:45a' NOT NULL, 
-  9  varchar(5) DEFAULT '45x:0' NOT NULL, 
-  10 varchar(5) DEFAULT '0:45x' NOT NULL, 
-  11 varchar(5) DEFAULT 'other' NOT NULL);
-
+  Value  varchar(5) 
+  GeoKey  int(2)
+  PRIMARY KEY (GeoKey));
 
 CREATE TABLE SpectralQuantity (
-  0  varchar(4) DEFAULT 'flux' NOT NULL, 
-  1  varchar(11) DEFAULT 'absorptance' NOT NULL, 
-  2  varchar(13) DEFAULT 'transmittance' NOT NULL, 
-  3  varchar(11) DEFAULT 'reflectance' NOT NULL, 
-  4  varchar(9) DEFAULT 'intensity' NOT NULL, 
-  5  varchar(10) DEFAULT 'irradiance' NOT NULL, 
-  6  varchar(8) DEFAULT 'radiance' NOT NULL, 
-  7  varchar(8) DEFAULT 'exitance' NOT NULL, 
-  8  varchar(8) DEFAULT 'R-Factor' NOT NULL, 
-  9  varchar(8) DEFAULT 'T-Factor' NOT NULL, 
-  10 varchar(8) DEFAULT 'relative' NOT NULL, 
-  11 varchar(5) DEFAULT 'other' NOT NULL);
+  Value  varchar(13) 
+  SpectralQKey  int(2)
+  PRIMARY KEY (SpectralQKey));
+
+
+INSERT INTO ReflectionGeometry(GeoKey,Value)
+VALUES 
+  (0,'di:8'), 
+  (1,'de:8'),  
+  (2,'8:di'), 
+  (3,'8:de'),  
+  (4,'d:d'),  
+  (5,'d:0'),  
+  (6,'45a:0'),  
+  (7,'45c:0'),  
+  (8,'0:45a'),  
+  (9,'45x:0'),  
+  (10,'0:45x'),  
+  (11,'other');
+
+INSERT INTO SpectralQuantity(SpectralQKey,Value)
+VALUES
+  (0,'flux'),
+  (1,'absorptance'),  
+  (2,'transmittance'),  
+  (3,'reflectance'),  
+  (4,'intensity'),  
+  (5,'irradiance'),  
+  (6,'radiance'),  
+  (7,'exitance'),  
+  (8,'R-Factor'),  
+  (9,'T-Factor'),  
+  (10,'relative'),  
+  (11,'other');

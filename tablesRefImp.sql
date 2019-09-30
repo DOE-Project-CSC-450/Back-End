@@ -1,13 +1,17 @@
 CREATE TABLE ReflectionGeometry (
-  Value  varchar(5) 
-  GeoKey  int(2)
+  Value  varchar(5), 
+  GeoKey  int(2),
   PRIMARY KEY (GeoKey));
 
 CREATE TABLE SpectralQuantity (
-  Value  varchar(13) 
-  SpectralQKey  int(2)
+  Value  varchar(13),
+  SpectralQKey  int(2),
   PRIMARY KEY (SpectralQKey));
 
+CREATE TABLE TransmissionGeometry (
+  Value  varchar(5),
+  TranKey  int(2),
+  PRIMARY KEY (TranKey));
 
 INSERT INTO ReflectionGeometry(GeoKey,Value)
 VALUES 
@@ -38,3 +42,14 @@ VALUES
   (9,'T-Factor'),  
   (10,'relative'),  
   (11,'other');
+
+
+INSERT INTO TransmissionGeometry(TranKey,Value)
+VALUES 
+  (0,'0:0'), 
+  (1,'di:0'),  
+  (2,'de:0'), 
+  (3,'0:di'),  
+  (4,'0:de'),  
+  (5,'d:d'),  
+  (6,'other');

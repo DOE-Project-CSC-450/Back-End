@@ -1,15 +1,15 @@
 # Environment Requirement:
-## backend:
+## Backend:
 pip install django
 
 pip install djangorestframework django-cors-headers
 
-## frontend:
+## Frontend:
 npm install -g create-react-app
 
 yarn add axios
 
-# to connect the backend to your database
+# To connect the backend to your database
 edit backend/backend/settings.py from line 90 - line 100
 
 I suggest you create a new database to prevent from affecting your current database.
@@ -46,7 +46,7 @@ password: admin
 ## Frontend:
 http://localhost:3000/
 
-# Notes for frontend team
+# Notes for Frontend team
 I have set and format the backend api for the frontend to easily use.
 
 Check backend/api.serializers.py to see all the available variables inside ''. For example: 'SpectralSearchID'

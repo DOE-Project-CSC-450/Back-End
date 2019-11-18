@@ -34,7 +34,7 @@ CREATE TABLE `Header Element Fields` (
   `CatalogNumber` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `DocumentCreator` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `UniqueIdentifier` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `UniqueIdentifier` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `MeasurementEquipment` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Laboratory` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ReportNumber` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,

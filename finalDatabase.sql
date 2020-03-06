@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 09, 2019 at 05:57 AM
+-- Generation Time: Mar 06, 2020 at 08:21 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -38,14 +38,18 @@ CREATE TABLE `Header Element Fields` (
   `Technology` varchar(15) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `Header Element Fields`
+-- Table structure for table `Metrics`
 --
 
-INSERT INTO `Header Element Fields` (`SpectraSearchID`, `Name`, `Manufacturer`, `CatalogNumber`, `Description`, `DocumentCreator`, `UniqueIdentifier`, `MeasurementEquipment`, `Laboratory`, `ReportNumber`, `ReportDate`, `Comments`, `Application`, `Type`, `Technology`) VALUES
-(1, 'GE Wattmiser 52 W frosted', 'GE Lighting', 'UNSPSC39101612', '52 Watts Incandescent Lamp, A19, Medium Screw (E26), 530/710 Lumens, 2800K Bulb Color Temp.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'A-type', 'Lamp', 'Incandescent'),
-(2, 'LiteBook-Elite 1000Lux', 'LiteBook', NULL, 'The Litebook Elite features a custom lens and diffusion system which, combined with the high-performance white LEDs that all Litebook products are known for, produces a uniform field of bright yet soothing light. ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Health/Therapy', 'Luminaire', 'LED'),
-(3, 'Roscolux R11 Light Straw Filter', 'Rosco Labs', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Filter', 'Filter', 'Filter');
+CREATE TABLE `Metrics` (
+  `CCT` int(11) NOT NULL,
+  `CRI_R1` int(11) NOT NULL,
+  `CRI_R2` int(11) NOT NULL,
+  `CRI_R3` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 

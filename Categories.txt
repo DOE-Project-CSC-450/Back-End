@@ -1,0 +1,30 @@
+Application
+A-type
+Decorative
+Directional
+Small Directional
+Downlighting
+Linear Fixture
+Low/High Bay
+Indoor Other
+Parking (Lot)
+Parking (Garage)
+Street/Roadway
+Building Exterior
+Outdoor Other
+Connected
+Spiral
+Medical
+
+Type
+Lamp
+Luminaire
+Retrofit Kit
+No Distinction
+Other
+
+Technology
+LED
+Incandescent
+Fluorescent
+Other
